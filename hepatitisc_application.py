@@ -62,8 +62,8 @@ def eligibility_status(givendata):
     loaded_model=pk.load(open("The_Hepatitis_Model.sav", "rb"))
     input_data_as_numpy_array = np.asarray(givendata)# changing the input_data to numpy array
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1) # reshape the array as we are predicting for one instance
-    std=StandardScaler()
-    std_input_data_reshaped=std.fit_transform(input_data_reshaped)
+    std_scaler=pk.load(open("Hepatitis_saved_std_scaler.pkl", "rb"))
+    std_input_data_reshaped=std_scaler.transform(input_data_reshaped)
     prediction = loaded_model.predict(std_input_data_reshaped)
     if prediction==0:
       return"No hepatitis"
