@@ -287,5 +287,5 @@ if selection == 'Multi Prediction':
         st.info('waiting for CSV file to be uploaded.')
 
 if selection == 'Single Prediction':
-        main()
+    main()
 
