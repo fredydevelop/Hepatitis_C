@@ -207,7 +207,7 @@ interchange=[]
 
 def multi(input_data):
     loaded_model=pk.load(open("The_Hepatitis_Model.sav", "rb"))
-    dfinput = pd.read_csv(input_data, header=None)
+    dfinput = pd.read_csv(input_data)
   
     st.header('Preview of the uploaded dataset')
     # st.markdown('Preview of the uploaded dataset')
@@ -217,7 +217,7 @@ def multi(input_data):
     st.write("\n")
     st.write("\n")
     # dfinput=pd.DataFrame(dfinput.values)
-    dfinput=dfinput.iloc[1:].reset_index(drop=True)
+    #dfinput=dfinput.iloc[1:].reset_index(drop=True)
     
 
     std_scaler=pk.load(open("Hepatitis_saved_std_scaler.pkl", "rb"))
