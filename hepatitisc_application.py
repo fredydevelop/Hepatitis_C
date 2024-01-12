@@ -101,34 +101,34 @@ def main():
     st.write("\n")
     st.write("\n")
 
-    ALB =  st.text_input('Albumin Blood Test',"0")
+    ALB =  st.text_input('Albumin Blood Test',"")
     ALB=float(ALB)
 
-    ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
+    ALP =  st.text_input('Alkaline phosphatase',"",key="alp")
     ALP=float(ALP)
-    # ALP =  st.text_input('Movie title',"0",key="alp")
-    ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
+    # ALP =  st.text_input('Movie title',"",key="alp")
+    ALT =  st.text_input('Alanine Transaminase',"",key="alt")
     ALT=float(ALT)
 
-    AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
+    AST =  st.text_input('Aspartate Transaminase',"",key="ast")
     AST=float(AST)
 
-    BIL =  st.text_input('Bilirubin',"0",key="bil")
+    BIL =  st.text_input('Bilirubin',"",key="bil")
     BIL=float(BIL)
 
-    CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
+    CHE =  st.text_input('Acetylcholinesterase',"",key="che")
     CHE=float(CHE)
 
-    CHOL =  st.text_input('Cholesterol',"0",key="chol")
+    CHOL =  st.text_input('Cholesterol',"",key="chol")
     CHOL=float(CHOL)
 
-    CREA =  st.text_input('Creatinine',"0",key="crea")
+    CREA =  st.text_input('Creatinine',"",key="crea")
     CREA=float(CREA)
 
-    GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
+    GGT =  st.text_input('Gamma-Glutamyl Transferase',"",key="ggt")
     GGT=float(GGT)
 
-    PROT =  st.text_input('Proteins',"0",key="prot")
+    PROT =  st.text_input('Proteins',"",key="prot")
     PROT=float(PROT)
 
    
@@ -136,7 +136,7 @@ def main():
     medical_advice=""
     
     # creating a button for Prediction
-    if option!="" and Age!=0 and ALB!=0 and ALP!=0 and ALT!=0 and AST!=0 and BIL!=0 and CHE!=0 and CHOL!=0 and CREA!=0 and GGT!=0 and PROT!=0 and st.button('Predict'):
+    if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
     
