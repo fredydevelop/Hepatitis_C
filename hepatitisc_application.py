@@ -85,7 +85,7 @@ def main():
 
     
     #getting user input
-    option = st.radio("select the patient sex",["Male",'Female'],key="gender",horizontal=True)
+    option = st.radio("select the patient sex",["Male",'Female'],key="gender")
     if (option=='Male'):
         Sex=1
     else:
