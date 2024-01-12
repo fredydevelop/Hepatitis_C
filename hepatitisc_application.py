@@ -101,7 +101,7 @@ def main():
     st.write("\n")
     st.write("\n")
 
-    ALB =  st.text_input('Albumin Blood Test',"")
+    ALB =  st.text_input('Albumin Blood Test'," ")
     ALB=float(ALB)
 
     ALP =  st.text_input('Alkaline phosphatase',"",key="alp")
