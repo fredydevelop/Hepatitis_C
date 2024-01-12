@@ -101,34 +101,34 @@ def main():
     st.write("\n")
     st.write("\n")
 
-    ALB =  st.text_input('ALB',"0")
+    ALB =  st.text_input('Albumin Blood Test',"0")
     ALB=float(ALB)
 
-    ALP =  st.text_input('ALP',"0",key="alp")
+    ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
     ALP=float(ALP)
     # ALP =  st.text_input('Movie title',"0",key="alp")
-    ALT =  st.text_input('ALT',"0",key="alt")
+    ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
     ALT=float(ALT)
 
-    AST =  st.text_input('AST',"0",key="ast")
+    AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
     AST=float(AST)
 
-    BIL =  st.text_input('BIL',"0",key="bil")
+    BIL =  st.text_input('Bilirubin',"0",key="bil")
     BIL=float(BIL)
 
-    CHE =  st.text_input('CHE',"0",key="che")
+    CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
     CHE=float(CHE)
 
-    CHOL =  st.text_input('CHOL',"0",key="chol")
+    CHOL =  st.text_input('Cholesterol',"0",key="chol")
     CHOL=float(CHOL)
 
-    CREA =  st.text_input('CREA',"0",key="crea")
+    CREA =  st.text_input('Creatinine',"0",key="crea")
     CREA=float(CREA)
 
-    GGT =  st.text_input('GGT',"0",key="ggt")
+    GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
     GGT=float(GGT)
 
-    PROT =  st.text_input('PROT',"0",key="prot")
+    PROT =  st.text_input('Proteins',"0",key="prot")
     PROT=float(PROT)
 
    
