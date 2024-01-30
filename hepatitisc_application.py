@@ -79,7 +79,7 @@ def eligibility_status(givendata):
 
 
 def main():
-    st.header("Herpatitis Detector")
+    st.header("Herpatitis C Detector")
     theReasons=[]
 
 
