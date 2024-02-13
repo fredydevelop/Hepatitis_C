@@ -104,7 +104,7 @@ def main():
     try:
         ALB =  st.text_input('Albumin Blood Test',"0")
         ALB=float(ALB)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
