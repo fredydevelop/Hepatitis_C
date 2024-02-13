@@ -104,42 +104,76 @@ def main():
     try:
         ALB =  st.text_input('Albumin Blood Test',"0")
         ALB=float(ALB)
-    except:
-        st.write("Incorrect Input")
+    except TypeError:
+        st.error("Incorrect Input")
 
-    ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
-    ALP=float(ALP)
-    # ALP =  st.text_input('Movie title',"0",key="alp")
-    ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
-    ALT=float(ALT)
+    try:
+        ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
+        ALP=float(ALP)
+    except TypeError:
+        st.error("Incorrect Input")
 
-    AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
-    AST=float(AST)
 
-    BIL =  st.text_input('Bilirubin',"0",key="bil")
-    BIL=float(BIL)
+    try:
+        # ALP =  st.text_input('Movie title',"0",key="alp")
+        ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
+        ALT=float(ALT)
+    except TypeError:
+        st.error("Incorrect Input")
 
-    CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
-    CHE=float(CHE)
+    try:
 
-    CHOL =  st.text_input('Cholesterol',"0",key="chol")
-    CHOL=float(CHOL)
+        AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
+        AST=float(AST)
+    except TypeError:
+        st.error("Incorrect Input")
 
-    CREA =  st.text_input('Creatinine',"0",key="crea")
-    CREA=float(CREA)
+    try:
 
-    GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
-    GGT=float(GGT)
+        BIL =  st.text_input('Bilirubin',"0",key="bil")
+        BIL=float(BIL)
+    except TypeError:
+        st.error("Incorrect Input")
 
-    PROT =  st.text_input('Proteins',"0",key="prot")
-    PROT=float(PROT)
+    try:
+        CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
+        CHE=float(CHE)
+    except TypeError:
+        st.error("Incorrect Input")
+
+    try:
+
+        CHOL =  st.text_input('Cholesterol',"0",key="chol")
+        CHOL=float(CHOL)
+    except TypeError:
+        st.error("Incorrect Input")
+
+    try:
+
+        CREA =  st.text_input('Creatinine',"0",key="crea")
+        CREA=float(CREA)
+    except TypeError:
+        st.error("Incorrect Input")
+    
+    try:   
+
+        GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
+        GGT=float(GGT)
+    except TypeError:
+        st.error("Incorrect Input")
+
+    try:
+        PROT =  st.text_input('Proteins',"0",key="prot")
+        PROT=float(PROT)
+    except TypeError:
+        st.error("Incorrect Input")
 
    
     Eligible = '' #for displaying result
     medical_advice=""
     
     # creating a button for Prediction
-    if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
+    if option!=None and Age!=None and ALB!=None and ALP!=None and ALT!=None and AST!=None and BIL!=None and CHE!=None and CHOL!=None and CREA!=None and GGT!=None and PROT!=None and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
     
