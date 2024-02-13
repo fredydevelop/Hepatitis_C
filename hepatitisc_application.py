@@ -102,13 +102,13 @@ def main():
     st.write("\n")
 
     try:
-        ALB =  st.text_input('Albumin Blood Test',key="alb")
+        ALB =  st.text_input('Albumin Blood Test',"0")
         ALB=float(ALB)
     except:
         st.error("Incorrect Input")
 
     try:
-        ALP =  st.text_input('Alkaline phosphatase',key="alp")
+        ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
         ALP=float(ALP)
     except:
         st.error("Incorrect Input")
@@ -116,54 +116,54 @@ def main():
 
     try:
         # ALP =  st.text_input('Movie title',"0",key="alp")
-        ALT =  st.text_input('Alanine Transaminase',key="alt")
+        ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
         ALT=float(ALT)
     except:
         st.error("Incorrect Input")
 
     try:
 
-        AST =  st.text_input('Aspartate Transaminase',key="ast")
+        AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
         AST=float(AST)
     except:
         st.error("Incorrect Input")
 
     try:
 
-        BIL =  st.text_input('Bilirubin',key="bil")
+        BIL =  st.text_input('Bilirubin',"0",key="bil")
         BIL=float(BIL)
     except:
         st.error("Incorrect Input")
 
     try:
-        CHE =  st.text_input('Acetylcholinesterase',key="che")
+        CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
         CHE=float(CHE)
     except:
         st.error("Incorrect Input")
 
     try:
 
-        CHOL =  st.text_input('Cholesterol',key="chol")
+        CHOL =  st.text_input('Cholesterol',"0",key="chol")
         CHOL=float(CHOL)
     except:
         st.error("Incorrect Input")
 
     try:
 
-        CREA =  st.text_input('Creatinine',key="crea")
+        CREA =  st.text_input('Creatinine',"0",key="crea")
         CREA=float(CREA)
     except:
         st.error("Incorrect Input")
     
     try:   
 
-        GGT =  st.text_input('Gamma-Glutamyl Transferase',key="ggt")
+        GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
         GGT=float(GGT)
     except:
         st.error("Incorrect Input")
 
     try:
-        PROT =  st.text_input('Proteins',key="prot")
+        PROT =  st.text_input('Proteins',"0",key="prot")
         PROT=float(PROT)
     except:
         st.error("Incorrect Input")
@@ -173,7 +173,7 @@ def main():
     medical_advice=""
     
     # creating a button for Prediction
-    if option and Age and ALB and ALP and ALT and AST and BIL and CHE and CHOL and CREA and GGT and PROT and st.button('Predict'):
+    if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
     
