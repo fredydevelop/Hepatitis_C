@@ -102,7 +102,7 @@ def main():
     st.write("\n")
 
     try:
-        ALB =  st.text_input('Albumin Blood Test',"")
+        ALB =  st.text_input('Albumin Blood Test',"0")
         ALB=float(ALB)
     except:
         st.error("Incorrect Input")
@@ -132,7 +132,7 @@ def main():
 
         BIL =  st.text_input('Bilirubin',"0",key="bil")
         BIL=float(BIL)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
@@ -156,6 +156,7 @@ def main():
         st.error("Incorrect Input")
     
     try:   
+
         GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
         GGT=float(GGT)
     except:
@@ -172,7 +173,7 @@ def main():
     medical_advice=""
     
     # creating a button for Prediction
-    if option!=None and Age!=None and ALB!=None and ALP!=None and ALT!=None and AST!=None and BIL!=None and CHE!=None and CHOL!=None and CREA!=None and GGT!=None and PROT!=None and st.button('Predict'):
+    if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
     
