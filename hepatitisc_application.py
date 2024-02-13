@@ -110,7 +110,7 @@ def main():
     try:
         ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
         ALP=float(ALP)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
 
@@ -118,14 +118,14 @@ def main():
         # ALP =  st.text_input('Movie title',"0",key="alp")
         ALT =  st.text_input('Alanine Transaminase',"0",key="alt")
         ALT=float(ALT)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
 
         AST =  st.text_input('Aspartate Transaminase',"0",key="ast")
         AST=float(AST)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
@@ -138,34 +138,33 @@ def main():
     try:
         CHE =  st.text_input('Acetylcholinesterase',"0",key="che")
         CHE=float(CHE)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
 
         CHOL =  st.text_input('Cholesterol',"0",key="chol")
         CHOL=float(CHOL)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
 
         CREA =  st.text_input('Creatinine',"0",key="crea")
         CREA=float(CREA)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
     
     try:   
-
         GGT =  st.text_input('Gamma-Glutamyl Transferase',"0",key="ggt")
         GGT=float(GGT)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
     try:
         PROT =  st.text_input('Proteins',"0",key="prot")
         PROT=float(PROT)
-    except TypeError:
+    except:
         st.error("Incorrect Input")
 
    
