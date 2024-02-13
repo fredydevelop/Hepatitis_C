@@ -101,8 +101,11 @@ def main():
     st.write("\n")
     st.write("\n")
 
-    ALB =  st.text_input('Albumin Blood Test',"0")
-    ALB=float(ALB)
+    try:
+        ALB =  st.text_input('Albumin Blood Test',"0")
+        ALB=float(ALB)
+    except:
+        st.write("Incorrect Input")
 
     ALP =  st.text_input('Alkaline phosphatase',"0",key="alp")
     ALP=float(ALP)
