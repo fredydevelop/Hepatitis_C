@@ -102,7 +102,7 @@ def main():
     st.write("\n")
 
     try:
-        ALB =  st.text_input('Albumin Blood Test',"0")
+        ALB =  st.text_input('Albumin Blood Test')
         ALB=float(ALB)
     except:
         st.error("Incorrect Input")
