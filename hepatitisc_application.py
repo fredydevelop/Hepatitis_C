@@ -173,7 +173,7 @@ def main():
     medical_advice=""
     
     # creating a button for Prediction
-    if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
+    if option and Age and ALB and ALP and ALT and AST and BIL and CHE and CHOL and CREA and GGT and PROT and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
     
