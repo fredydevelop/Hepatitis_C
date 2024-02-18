@@ -176,65 +176,7 @@ def main():
     if option!="" and Age!="" and ALB!="" and ALP!="" and ALT!="" and AST!="" and BIL!="" and CHE!="" and CHOL!="" and CREA!="" and GGT!="" and PROT!="" and st.button('Predict'):
         Eligible = eligibility_status([Age, Sex, ALB, ALP, ALT,AST,BIL, CHE, CHOL, CREA, GGT, PROT])
         st.success(Eligible)
-    
-    
-    if Eligible=="No hepatitis":
-      advice=["Maintain a balanced diet rich in fruits, vegetables, and whole grains to support liver health.",
-    "Exercise regularly and avoid excessive alcohol consumption to keep your liver in optimal condition.",
-    "Remember to schedule regular check-ups with your healthcare provider to monitor your liver function."]
-      st.write("Medical Advice")
-      j=0
-      k=1
-      while j< len(advice):
-        st.write(str(k) + ". " + advice[j])
-        j=j+1
-        k=k+1
 
-    elif Eligible=="Suspected Hepatitis":
-        advice=["It's important to avoid sharing personal items like razors or toothbrushes to prevent potential transmission.","Consider consulting a healthcare professional for further testing to confirm or rule out hepatitis.","In the meantime, practice good hygiene and take precautions to protect others from potential exposure."]
-        st.write("Medical Advice")
-        j=0
-        k=1
-        while j< len(advice):
-            st.write(str(k) + ". " + advice[j])
-            j=j+1
-            k=k+1
-    elif Eligible=="Hepatitis is present":
-        advice=["You've been diagnosed with Hepatitis C. It's crucial to follow your healthcare provider's treatment plan.",
-    "Discuss treatment options, potential side effects, and any concerns you may have with your healthcare team.",
-    "Avoid alcohol and certain medications that may further strain your liver. Follow a liver-friendly diet."]
-        st.write("Medical Advice")
-        j=0
-        k=1
-        while j< len(advice):
-            st.write(str(k) + ". " + advice[j])
-            j=j+1
-            k=k+1 
-    elif Eligible=="Fibrosis(mild)":
-        advice=["Fibrosis is an early stage of liver scarring. Focus on a low-fat, high-fiber diet to support your liver.",
-    "Regular exercise can help improve liver function. Consult your healthcare provider for personalized advice.",
-    "Stay on top of follow-up appointments to monitor the progression of fibrosis and discuss any concerns."]
-        st.write("Medical Advice")
-        j=0
-        k=1
-        while j< len(advice):
-            st.write(str(k) + ". " + advice[j])
-            j=j+1
-            k=k+1 
-    elif Eligible=="Cirrhosis(chronic)" :
-        advice=["Managing cirrhosis requires close medical supervision. Follow your healthcare provider's recommendations diligently.",
-    "Limit sodium intake to reduce fluid retention. Your provider can guide you on an appropriate diet plan.",
-    "Keep a record of any new symptoms and report them to your healthcare team promptly."]
-        st.write("Medical Advice")
-        j=0
-        k=1
-        while j< len(advice):
-            st.write(str(k) + ". " + advice[j])
-            j=j+1
-            k=k+1 
-    else:
-        st.write("")
-    #     st.balloons()
 
  
     
